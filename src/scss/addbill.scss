@@ -1,0 +1,223 @@
+@import "_minix.scss";
+@import "common.scss";
+* {
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+#head {
+    height: rem(135px);
+    background: #ffe142;
+    padding: rem(15px);
+    .head-top {
+        height: rem(60px);
+        display: flex;
+        >p {
+            width: 130px;
+            height: 40px;
+            font-size: rem(30px);
+            color: #000;
+        }
+        >div {
+            flex: 1;
+            font-size: rem(14px);
+            height: rem(37px);
+            line-height: rem(37px);
+            ul {
+                display: flex;
+                @include align;
+                border: 1px solid #000;
+                border-radius: rem(20px);
+                li {
+                    flex: 1;
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                li:first-child {
+                    border-radius: rem(20px) 0 0 rem(20px);
+                }
+                li:last-child {
+                    border-right: 0;
+                    border-radius: 0 rem(20px) rem(20px) 0;
+                }
+                li.cur {
+                    background: #000;
+                    color: #ffe142;
+                }
+            }
+        }
+        img {
+            padding-left: rem(8px);
+            width: 130px;
+            height: 40px;
+        }
+    }
+}
+
+.write-text {
+    width: 100%;
+    height: rem(45px);
+    border-bottom: 1px solid #000;
+    input {
+        background: #ffe142;
+        border: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+#swiper {
+    height: rem(200px);
+}
+
+#swipertwo {
+    height: rem(200px);
+}
+
+section {
+    flex: 1;
+    overflow-y: auto;
+    #swiperslide {
+        width: 100%;
+        @include box_flex;
+        flex-wrap: wrap;
+        background: #fff;
+        dl {
+            width: 25%;
+            text-align: center;
+            @include box_flex;
+            @include direction(column);
+            @include align;
+            @include justify;
+            dd {
+                width: rem(45px);
+                height: rem(45px);
+                background: #eee;
+                border-radius: 50%;
+                span {
+                    font-size: rem(35px);
+                }
+            }
+            dt {
+                font-size: rem(16px);
+                margin-top: rem(10px);
+            }
+        }
+    }
+    .section-tit {
+        height: rem(55px);
+        @include box_flex;
+        @include justify;
+        @include align;
+        background: #fff;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        margin-top: rem(40px);
+        p {
+            flex: 1;
+            text-align: center;
+            span {
+                height: rem(55px);
+                font-size: rem(16px);
+                line-height: rem(55px);
+                color: #000;
+            }
+            >.mui-icon {
+                font-size: rem(25px);
+            }
+        }
+    }
+    .section-notes {
+        height: rem(65px);
+        line-height: rem(65px);
+        font-size: rem(16px);
+        @include box_flex;
+        @include justify(space-between);
+        padding: 0 rem(20px);
+        background: #fff;
+        span {
+            height: rem(65px);
+            line-height: rem(65px);
+            color: #000;
+        }
+        .mui-icon-camera {
+            font-size: rem(28px);
+        }
+    }
+}
+
+.content {
+    width: 100%;
+    >ul {
+        display: flex;
+        li {
+            width: 100%;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    height: rem(240px);
+    border: 1px solid #ccc;
+    background: #fff;
+    .foot-ollist {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        li {
+            width: 25%;
+            height: 100%;
+            @include box_flex;
+            @include direction(column);
+            @include align;
+            @include justify;
+            span {
+                width: 100%;
+                height: 25%;
+                line-height: 59.5px;
+                text-align: center;
+                font-size: rem(24px);
+                border: 1px solid #ccc;
+            }
+        }
+        li:last-child {
+            width: 25%;
+            height: 100%;
+            @include box_flex;
+            p:first-child {
+                width: 100%;
+                @include box_flex;
+                flex-wrap: wrap;
+                span {
+                    width: 50%;
+                    height: 50%;
+                    text-align: center;
+                    font-size: rem(24px);
+                    color: #000;
+                }
+            }
+            p:last-child {
+                width: 100%;
+                font-size: rem(30px);
+                text-align: center;
+                line-height: 120px;
+                color: #000;
+                background: orange;
+            }
+            p {
+                flex: 1;
+            }
+        }
+    }
+}

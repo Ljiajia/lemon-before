@@ -1,0 +1,217 @@
+@import "_minix.scss";
+@import "common.scss";
+#muibar {
+    height: 150px;
+    background-color: #fde344;
+}
+
+.statement {
+    width: 100%;
+    background: #fcfcfc;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    height: rem(70px);
+    line-height: rem(70px);
+    padding-left: rem(15px);
+    display: flex;
+}
+
+.mui-bar {
+    padding: 0;
+}
+
+#slideleft {
+    width: 70px;
+    font-size: rem(30px);
+    margin-top: rem(8px);
+}
+
+.check {
+    display: flex;
+    flex: 1;
+    margin-left: rem(40px);
+    p {
+        flex: 1;
+        font-size: rem(16px);
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        height: rem(35px);
+        line-height: rem(35px);
+        span:nth-child(1) {
+            margin-top: rem(3px);
+        }
+        span:nth-child(2) {
+            color: #f00;
+        }
+    }
+    p:nth-child(2) {
+        span:nth-child(2) {
+            color: #0f0;
+        }
+    }
+    p:nth-child(3) {
+        span:nth-child(2) {
+            color: #f0f;
+        }
+    }
+}
+
+.head-nav {
+    width: 100%;
+    padding: rem(15px) rem(5px);
+    padding-left: rem(20px);
+    font-size: rem(14px);
+    @include box_flex;
+    >span {
+        width: rem(100px);
+    }
+    >ul {
+        flex: 1;
+        @include box_flex;
+        font-size: rem(14px);
+        justify-content: flex-end;
+        li {
+            border: 1px solid #000;
+            border-radius: rem(3px);
+            padding: 0 rem(4px);
+            margin-right: rem(5px);
+            height: 27px;
+            line-height: 27px;
+        }
+    }
+}
+
+.money {
+    font-size: rem(36px);
+    font-weight: bold;
+    padding-left: rem(20px);
+}
+
+.header-bottom {
+    @include box_flex;
+    margin-top: rem(10px);
+    padding-left: rem(20px);
+    P:nth-child(1) {
+        span:nth-child(1) {
+            font-size: rem(14px)
+        }
+        span:nth-child(2) {
+            font-size: rem(18px);
+            font-weight: bold;
+        }
+    }
+    p {
+        color: #000;
+        flex: 1;
+        font-size: rem(14px);
+    }
+}
+
+.mui-bar-nav~.mui-content {
+    padding-top: 220px;
+    padding-bottom: 60px;
+}
+
+.mui-slider-handle {
+    width: 100%;
+    @include box_flex;
+    p:nth-child(1) {
+        width: rem(50px);
+        height: rem(55px);
+        background: #fde344;
+        margin-top: rem(3px);
+        padding: rem(5px);
+        border-radius: 50%;
+        #cycle {
+            font-size: rem(40px);
+        }
+    }
+    p:nth-child(2) {
+        flex: 1;
+        font-size: rem(12px);
+        @include box_flex;
+        @include direction(column);
+        margin-left: rem(10px);
+        span:nth-child(1) {
+            font-size: rem(18px);
+            font-weight: bold;
+            color: #000;
+            margin-top: rem(5px);
+        }
+        span:nth-child(2) {
+            font-size: rem(16px);
+            margin-top: rem(15px);
+        }
+    }
+    p:nth-child(3) {
+        width: rem(100px);
+        font-size: rem(22px);
+        line-height: rem(65px);
+    }
+    p.red {
+        color: #f00;
+    }
+    p.green {
+        color: #0f0;
+    }
+}
+
+.mui-scroll-wrapper {
+    height: 680px;
+    overflow-y: auto;
+    background: #fff;
+}
+
+#slide {
+    overflow-y: auto;
+    >h3 {
+        font-size: rem(24px);
+    }
+    >ul {
+        margin-bottom: rem(15px);
+        >li {
+            font-size: rem(14px);
+            border: 1px solid #666;
+            color: #666;
+            border-radius: rem(12px);
+            display: inline-block;
+            margin: 0 rem(5px);
+            padding: rem(3px) rem(10px);
+        }
+    }
+    button {
+        border-radius: rem(20px);
+        padding: rem(10px) rem(40px);
+    }
+    button.cur {
+        background: #fde344;
+    }
+}
+
+#add {
+    position: absolute;
+    left: 50%;
+    bottom: rem(47px);
+    margin-left: rem(-25px);
+    width: rem(70px);
+    height: rem(70px);
+    line-height: rem(70px);
+    z-index: 9;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    p {
+        position: absolute;
+        top: rem(10px);
+        color: #fff;
+        background: #fde344;
+        font-size: rem(50px);
+        border-radius: 50%;
+        width: rem(50px);
+        height: rem(50px);
+        line-height: rem(50px);
+        margin-left: rem(9px);
+        z-index: 15;
+    }
+}
