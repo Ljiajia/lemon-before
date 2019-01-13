@@ -7,7 +7,7 @@ var babel = require("gulp-babel");
 var uglify = require("gulp-uglify"); //压缩js
 
 gulp.task("sass", function() {
-    return gulp.src(["./src/scss/style.scss", "./src/scss/addbill.scss"])
+    return gulp.src(["./src/scss/style.scss", "./src/scss/addbill.scss", "./src/scss/addicon.scss"])
         .pipe(sass())
         .pipe(cleanCss())
         .pipe(gulp.dest("./dist/css/"))
@@ -24,6 +24,20 @@ gulp.task("server", function() {
             }, {
                 source: "/bill/api/removebill",
                 target: "http://localhost:3000/bill/api/removebill"
+            }, {
+                source: "/bill/api/addbill",
+                target: "http://localhost:3000/bill/api/addbill"
+            }, {
+                source: "/classify/api/findclassify",
+                target: "http://localhost:3000/classify/api/findclassify"
+
+            }, {
+                source: "/icon/api/findicon",
+                target: "http://localhost:3000/icon/api/findicon"
+
+            }, {
+                source: '/classify/api/addclassify',
+                target: 'http://localhost:3000/classify/api/addclassify'
             }]
         }))
 })

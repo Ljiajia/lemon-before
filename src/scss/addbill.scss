@@ -69,26 +69,34 @@
         border: 0;
         font-weight: bold;
         text-align: center;
+        font-size: rem(26px);
     }
 }
 
 #swiper {
-    height: rem(200px);
+    height: rem(240px);
 }
 
 #swipertwo {
-    height: rem(200px);
+    height: rem(240px);
+    width: 100%;
+}
+
+#swiperthree {
+    height: rem(240px);
+    width: 100%;
 }
 
 section {
     flex: 1;
     overflow-y: auto;
-    #swiperslide {
+    .swiperslide {
         width: 100%;
         @include box_flex;
         flex-wrap: wrap;
         background: #fff;
         dl {
+            height: rem(90px);
             width: 25%;
             text-align: center;
             @include box_flex;
@@ -101,8 +109,13 @@ section {
                 background: #eee;
                 border-radius: 50%;
                 span {
+                    height: rem(45px);
                     font-size: rem(35px);
+                    line-height: rem(45px);
                 }
+            }
+            dd.cur {
+                background: #ffe142;
             }
             dt {
                 font-size: rem(16px);
@@ -118,7 +131,6 @@ section {
         background: #fff;
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
-        margin-top: rem(40px);
         p {
             flex: 1;
             text-align: center;
@@ -154,6 +166,7 @@ section {
 
 .content {
     width: 100%;
+    background: #fff;
     >ul {
         display: flex;
         li {
@@ -220,4 +233,27 @@ footer {
             }
         }
     }
+}
+
+.mui-dtpicker-header {
+    padding: 0;
+}
+
+.swiper-pagination {
+    bottom: -30px;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 0;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: rem(30px);
+    height: rem(3px);
+}
+
+#paginationtwo {
+    width: rem(30px);
+    height: rem(3px);
+    background: red;
 }

@@ -5,7 +5,8 @@ require.config({
     "bscroll": "./libs/better-scroll",
     "muimin": "./libs/mui.min",
     "jquery": "./libs/jq",
-    "picker": "./libs/mui.picker.min"
+    "picker": "./libs/mui.picker.min",
+    "swiper": "./libs/swiper"
   },
   shim: {
     "picker": {
